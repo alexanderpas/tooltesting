@@ -14,6 +14,7 @@
     "ext-mbstring": "*",
     "dealerdirect/phpcodesniffer-composer-installer": "*",
     "ergebnis/composer-normalize": "*",
+    "infection/infection": "*",
     "overtrue/phplint": "*",
     "phpcompatibility/php-compatibility": "*",
     "phpunit/phpunit": "*",
@@ -42,6 +43,9 @@
     "post-update-cmd": [
       "@composer normalize"
     ],
+    "infection": [
+      "infection"
+    ],
     "phpcs": [
       "phpcs"
     ],
@@ -59,7 +63,8 @@
       "@phplint",
       "@phpcs",
       "@psalm",
-      "@phpunit"
+      "@phpunit",
+      "@infection"
     ]
   },
   "scripts-descriptions": {
