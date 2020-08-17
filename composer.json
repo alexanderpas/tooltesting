@@ -1,0 +1,68 @@
+{
+  "name": "alexanderpas/tooltesting",
+  "description": "description",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "alexanderpas",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "php": "^7.4",
+    "ext-mbstring": "*",
+    "dealerdirect/phpcodesniffer-composer-installer": "*",
+    "ergebnis/composer-normalize": "*",
+    "overtrue/phplint": "*",
+    "phpcompatibility/php-compatibility": "*",
+    "phpunit/phpunit": "*",
+    "roave/security-advisories": "*",
+    "squizlabs/php_codesniffer": "*",
+    "vimeo/psalm": "*"
+  },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Hello\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Hello\\Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "post-update-cmd": [
+      "@composer normalize"
+    ],
+    "phpcs": [
+      "phpcs"
+    ],
+    "phplint": [
+      "phplint"
+    ],
+    "phpunit": [
+      "phpunit"
+    ],
+    "psalm": [
+      "psalm"
+    ],
+    "test": [
+      "@composer install",
+      "@phplint",
+      "@phpcs",
+      "@psalm",
+      "@phpunit"
+    ]
+  },
+  "scripts-descriptions": {
+    "test": "Runs the complete testsuite"
+  }
+}

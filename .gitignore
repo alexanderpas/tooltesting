@@ -1,0 +1,13 @@
+/.idea/
+
+/vendor/*
+!/vendor/.gitkeep
+
+.phplint-cache
+.phpunit.result.cache
+
+.env
+.env.*
+!.env.example
+
+composer.lock

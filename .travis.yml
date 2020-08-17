@@ -1,0 +1,4 @@
+dist: focal
+language: php
+php:
+    - '7.4'
